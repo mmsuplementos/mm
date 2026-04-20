@@ -1088,7 +1088,7 @@ async function closeChatMobile(){
   activeConvId=null;
   renderConvList();
 }
-function finalizarConv(id){
+async function finalizarConv(id){
   await db.collection('conversas').doc(id).update({status:'finalizado',finalizadoAt:firebase.firestore.FieldValue.serverTimestamp()});
   toast('Conversa finalizada','success');
   document.getElementById('chat-panel').innerHTML='<div class="no-chat"><div class="icon">💬</div><p>Selecione uma conversa</p></div>';
