@@ -1512,7 +1512,7 @@ function updateDash(){
 
 async function checkWA(){
   try {
-    const res = await fetch('https://apis.mmsuplementoss.fun/whatsapp/2');
+    const res = await fetch('https://corsproxy.io/?https://apis.mmsuplementoss.fun/whatsapp/2');
     const d = await res.json();
     console.log('WA API:', d);
     const dot = document.getElementById('wa-dot');
